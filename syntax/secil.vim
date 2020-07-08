@@ -6,17 +6,20 @@ endif
 
 syntax region sExpression start='(' end=')' transparent fold
 
-syntax keyword secilKeyword block blockinherit in traverse
-syntax keyword secilKeyword type typealias typeattribute typeattributetypes
-syntax keyword secilKeyword typeabstract typeinherit
-syntax keyword secilKeyword boolean booleanif tunable tunableif or and eq neq
-syntax keyword secilKeyword category categoryorder categoryset
-syntax keyword secilKeyword level defaultrange range
-syntax keyword secilKeyword mls mlsconstrain
-syntax keyword secilKeyword sensitivity sensitivityorder sensitivitycategory
-syntax keyword secilKeyword user userrange userlevel userrole
-syntax keyword secilKeyword sid sidcontext context filecon
-syntax keyword secilKeyword allow allowx auditallow 
+syntax keyword secilKeyword block blockabstract blockinherit in
+syntax keyword secilKeyword user userattribute userattributeset userrange userlevel userrole
+syntax keyword secilKeyword role roleattribute roleattributeset roletype
+syntax keyword secilKeyword type typeattribute typeattributeset typealias typealiasactual
+syntax keyword secilKeyword boolean booleanif tunable tunableif
+syntax keyword secilKeyword dom domby incomp eq ne and or not xor
+syntax keyword secilKeyword sensitivity sensitivityalias sensitivityaliasactual sensitivityorder sensitivitycategory
+syntax keyword secilKeyword category categoryalias categoryaliasactual categoryorder categoryset
+syntax keyword secilKeyword level levelrange
+syntax keyword secilKeyword defaultuser defaultrole defaulttype defaultrang
+syntax keyword secilKeyword mls mlsconstrain constrain
+syntax keyword secilKeyword sid sidorder sidcontext context filecon
+syntax keyword secilKeyword allow allowx auditallow auditallowx neverallow neverallowx
+syntax keyword secilKeyword class classorder unordered classpermission classpermissionset classmap classmapping
 syntax keyword secilKeyword call
 
 "" Match string literals in the case of e.g., a path to filecon
@@ -33,7 +36,7 @@ syntax keyword secilMacro macro
 
 "" Match line comments
 
-syntax match secilComment "^;.*$"
+syntax match secilComment ";.*$"
 
 "" Set some common identifiers
 
