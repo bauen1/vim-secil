@@ -15,12 +15,16 @@ syntax keyword secilKeyword dom domby incomp eq ne and or not xor
 syntax keyword secilKeyword sensitivity sensitivityalias sensitivityaliasactual sensitivityorder sensitivitycategory
 syntax keyword secilKeyword category categoryalias categoryaliasactual categoryorder categoryset
 syntax keyword secilKeyword level levelrange
-syntax keyword secilKeyword defaultuser defaultrole defaulttype defaultrang
+syntax keyword secilKeyword defaultuser defaultrole defaulttype defaultrange
 syntax keyword secilKeyword mls mlsconstrain constrain
 syntax keyword secilKeyword sid sidorder sidcontext context filecon
-syntax keyword secilKeyword allow allowx auditallow auditallowx neverallow neverallowx
-syntax keyword secilKeyword class classorder unordered classpermission classpermissionset classmap classmapping
+syntax keyword secilKeyword allow allowx auditallow auditallowx neverallow neverallowx dontaudit roleallow
+syntax keyword secilKeyword class classorder unordered classpermission classpermissionset classmap classmapping common classcommon
+syntax keyword secilKeyword typetransition rangetransition roletransition
 syntax keyword secilKeyword call
+syntax keyword secilKeyword selinuxuser selinuxuserdefault
+syntax keyword secilKeyword optional
+syntax keyword secilKeyword all self range
 
 "" Match string literals in the case of e.g., a path to filecon
 
@@ -38,12 +42,18 @@ syntax keyword secilMacro macro
 
 syntax match secilComment ";.*$"
 
+"" Highlite todos
+
+syntax keyword secilTodos TODO XXX FIXME NOTE containedin=secilComment
+
 "" Set some common identifiers
 
-syntax keyword secilIdentifier low high systemlow systemhigh
+syntax keyword secilIdentifier low high systemlow systemhigh lowhigh lowlow highhigh
 syntax keyword secilIdentifier h1 h2 l1 l2
 syntax keyword secilIdentifier r1 r2 r3 t1 t2 t3 u1 u2 u3
 syntax keyword secilIdentifier object_r
+syntax keyword secilIdentifier type types templates
+syntax match secilIdentifier "\<template\(_\h\+\)\?"
 
 "" Add syntax highlighting for parenthesis
 
@@ -51,7 +61,7 @@ syntax match parens /[()]/
 
 "" Group all secil tokens together
 
-syntax cluster secilCluster contains=secilKeyword,secilString,secilConstant,secilMacro,secilComment
+syntax cluster secilCluster contains=secilKeyword,secilString,secilConstant,secilMacro,secilComment,secilTodos
 
 "" Create regions of nested parens for rainbow highlighting
 "" taken from the lisp highlighting by (`locate syntax/lisip.vim`)
