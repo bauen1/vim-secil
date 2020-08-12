@@ -11,15 +11,15 @@ syntax keyword secilKeyword user userattribute userattributeset userrange userle
 syntax keyword secilKeyword role roleattribute roleattributeset roletype
 syntax keyword secilKeyword type typeattribute typeattributeset typealias typealiasactual
 syntax keyword secilKeyword boolean booleanif tunable tunableif
-syntax keyword secilKeyword dom domby incomp eq ne and or not xor
+syntax keyword secilKeyword dom domby incomp eq ne neq and or not xor
 syntax keyword secilKeyword sensitivity sensitivityalias sensitivityaliasactual sensitivityorder sensitivitycategory
 syntax keyword secilKeyword category categoryalias categoryaliasactual categoryorder categoryset
 syntax keyword secilKeyword level levelrange
 syntax keyword secilKeyword defaultuser defaultrole defaulttype defaultrange
 syntax keyword secilKeyword mls mlsconstrain constrain
 syntax keyword secilKeyword sid sidorder sidcontext context filecon
-syntax keyword secilKeyword allow allowx auditallow auditallowx neverallow neverallowx dontaudit roleallow
-syntax keyword secilKeyword class classorder unordered classpermission classpermissionset classmap classmapping common classcommon
+syntax keyword secilKeyword allow allowx auditallow auditallowx neverallow neverallowx dontaudit dontauditx roleallow
+syntax keyword secilKeyword class classorder unordered classpermission classpermissionset classmap classmapping common classcommon permissionx
 syntax keyword secilKeyword typetransition rangetransition roletransition
 syntax keyword secilKeyword call
 syntax keyword secilKeyword selinuxuser selinuxuserdefault
