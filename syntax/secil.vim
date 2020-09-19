@@ -17,7 +17,7 @@ syntax keyword secilKeyword category categoryalias categoryaliasactual categoryo
 syntax keyword secilKeyword level levelrange
 syntax keyword secilKeyword defaultuser defaultrole defaulttype defaultrange
 syntax keyword secilKeyword mls mlsconstrain constrain
-syntax keyword secilKeyword sid sidorder sidcontext context filecon
+syntax keyword secilKeyword sid sidorder sidcontext context genfscon filecon
 syntax keyword secilKeyword allow allowx auditallow auditallowx neverallow neverallowx dontaudit dontauditx roleallow
 syntax keyword secilKeyword class classorder unordered classpermission classpermissionset classmap classmapping common classcommon permissionx
 syntax keyword secilKeyword typetransition rangetransition roletransition
