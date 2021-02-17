@@ -7,7 +7,7 @@ This is a vim plugin for working with SELinux CIL policy language. At the moment
 Using vundle, simply place the following in your .vimrc:
 
 ```
-Plugin 'garyttierney/vim-secil'
+Plugin 'bauen1/vim-secil'
 ```
 
 ## Usage
